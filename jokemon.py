@@ -12,12 +12,12 @@ from torch.nn import functional as F
 # hyperparameters
 batch_size = 32 # how many independent sequences will we process in parallel?
 block_size = 16 # what is the maximum context length for predictions?
-max_iters = 1000 # recommended: 2000 | 5000
+max_iters = 1000 # other recommended values: 2000 | 5000
 eval_interval = 100
 learning_rate = 3e-4
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 eval_iters = 200
-n_embd = 256 # recommended: 128 (1.59M params) | 256 (6.33M params) | 384 (14.22M params)
+n_embd = 128 # higher # recommended for colab: 128 (1.59M params) | 256 (6.33M params)/~43 mins on colab | 384 (14.22M params) / >1 hr on colab
 n_head = 8
 n_layer = 8
 dropout = 0.2
